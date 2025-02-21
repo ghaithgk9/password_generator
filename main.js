@@ -19,12 +19,6 @@ function generatePassword() {
     if (upper.checked) characters += upp_chars;
     if (symb.checked) characters += sym_chars;
     characters += num_chars;
-
-    if (characters.length === 0) {
-        result.textContent = "Select at least one option!";
-        return;
-    }
-
     for (let i = 0; i < length; i++) {
         let randomIndex = Math.floor(Math.random() * characters.length);
         password += characters[randomIndex];
